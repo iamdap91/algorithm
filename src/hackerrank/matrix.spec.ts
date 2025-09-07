@@ -6,11 +6,10 @@ function rotateMatrixClockwise(matrix: number[][]) {
   const rows = matrix.length;
   const cols = matrix[0].length;
 
-  // 1. 각 행을 뒤집기 (Reverse each row)
+  // 1. (Reverse each row)
   const reversedRowsMatrix = matrix.map((row) => [...row].reverse());
 
-  // 2. 전치 (Transpose): 뒤집힌 행렬을 전치합니다.
-  // 새로운 행렬의 크기는 원본 행렬의 열 x 행이 됩니다.
+  // 2. (Transpose)
   const rotatedMatrix = Array.from({ length: cols }, () => Array(rows).fill(0));
 
   for (let i = 0; i < rows; i++) {
