@@ -10,10 +10,12 @@ describe('permutations', () => {
 
       for (let i = 0; i < remainingElements.length; i++) {
         const nextElement = remainingElements[i];
-        const newRemainingElements = remainingElements
-          .slice(0, i)
-          .concat(remainingElements.slice(i + 1));
-        permute(currentPermutation.concat(nextElement), newRemainingElements);
+        const newRemainingElements = [
+          ...remainingElements.slice(0, i),
+          ...remainingElements.slice(i + 1),
+        ];
+
+        permute([...currentPermutation, nextElement], newRemainingElements);
       }
     }
 
@@ -23,6 +25,6 @@ describe('permutations', () => {
 
   it('solution', () => {
     const result = getPermutations([1, 2, 3]);
-    // console.log(result);
+    console.log(result);
   });
 });
