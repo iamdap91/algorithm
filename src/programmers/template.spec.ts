@@ -1,8 +1,8 @@
 describe('캐시.spec.ts', () => {
-  // function solution(cacheSize: number, cities: string[]): number {}
+  function solution() {}
 
   it('solution', () => {
-    // const result = solution('0001100');
-    // console.log(result);
+    const result = solution();
+    console.log(result);
   });
 });
