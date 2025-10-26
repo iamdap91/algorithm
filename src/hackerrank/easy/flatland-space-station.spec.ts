@@ -1,4 +1,4 @@
-describe('template', () => {
+describe('flatland-space-station.spec.ts', () => {
   function flatlandSpaceStations(n: number, stations: number[]) {
     let maxDistance = 0;
     for (let i = 0; i < n; i++) {
